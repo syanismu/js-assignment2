@@ -1,0 +1,66 @@
+
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+
+:root{
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 24px;
+    line-height: 2;
+}
+
+body{
+    background-color: #f0f8ff;
+}
+
+.gallery{
+    /* display: flex; */
+    justify-content: center;
+    align-items: flex-end;
+    
+    position: relative;
+    width: 1000px;
+    margin: auto;
+    /* overflow: hidden; */
+}
+
+.hero-wrap{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#hero-image{
+    width: 1000px;
+}
+
+.hero-wrap figcaption{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    margin: 2rem 0;
+}
+
+.hero-date{
+    font-size: 1.5rem;
+    line-height: 1;
+    text-align: center;
+}
+
+.hero-caption{
+    text-decoration: underline;
+    text-decoration-color: rgb(15, 130, 197);
+}
+
+.carousel{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+
+    /* position: absolute;
+    bottom: 0; */
+
+    list-style: none;
+}
+
+.thumbnail{
+    width: 200px;
+}

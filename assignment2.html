@@ -1,4 +1,10 @@
 <!-- Below, please list all group members' full names and student IDs. -->
+<!-- 
+	Shania Muller 200270187 
+	Tsz Ting Kwong 200514830
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,23 +17,28 @@
 </head>
 <body>
 	<!-- <h1>Image Gallery</h1> -->
-	<section id="gallery">
-		<figure id = "hero-image">
-			<img src="images/[filename]-large.jpg" alt="" width="1200" height="800" />
-			<figcaption>Feb 22</figcaption>
-			<figcaption>Image title to appear here</figcaption>
+	<section id="gallery" class="gallery">
+		<figure id = "hero-wrap" class="hero-wrap">
+			<img id="hero-image" src="images/japan-large.jpg" alt=""/>
+			<figcaption>
+				<div id = "hero-date" class="hero-date">Feb 22</div>
+				<div id = "hero-caption" class="hero-caption">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque reiciendis distinctio natus nemo veniam sit rem qui autem, nesciunt magni? Voluptatum blanditiis qui quae?</div>
+			</figcaption>
 		</figure>
 		
-		<ul id = "carousel">
-			<li><img class="thumbnail" src="images/[filename]-small.jpg" alt="" width="240" height="160" /></li>
-			<li><img class="thumbnail" src="images/[filename]-small.jpg" alt="" width="240" height="160" /></li>
-			<li><img class="thumbnail" src="images/[filename]-small.jpg" alt="" width="240" height="160" /></li>
-			<li><img class="thumbnail" src="images/[filename]-small.jpg" alt="" width="240" height="160" /></li>
-			<li><img class="thumbnail" src="images/[filename]-small.jpg" alt="" width="240" height="160" /></li>
+		<ul id = "carousel" class="carousel">
+			<li><img class="thumbnail" src="./images/brazil-small.jpg" alt=""/></li>
+			<li><img class="thumbnail" src="images/egypt-small.jpg" alt=""/></li>
+			<li><img class="thumbnail" src="images/zhangjiajie-small.jpg" alt=""/></li>
+			<li><img class="thumbnail" src="images/edinburgh-small.jpg" alt=""/></li>
+			<li><img class="thumbnail" src="images/newzealand-small.jpg" alt=""/></li>
+			<li><img class="thumbnail" src="images/switzerland-small.jpg" alt=""/></li>
+			<li><img class="thumbnail" src="images/norway-small.jpg" alt=""/></li>
 		</ul>
 
 	</section>
 	<script src="js/gallery.js"></script>
+	
 	<!-- PHOTO CREDITS
 	Sunflowers in the hamlet Dernekamp, Kirchspiel, Dülmen, North Rhine-Westphalia, Germany
 	By Dietmar Rabich - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=61514522
