@@ -11,12 +11,12 @@ let heroCaption = document.getElementById("hero-caption");
 
 // Initializing Photo objects for each image
 const photo1 = new Photo("brazil-large", "brazil-small", "Watching the sunset at the Itatiaia National Park in Brazil was breathtaking!", "July 17");
-const photo2 = new Photo("edinburgh-large", "edinburgh-small", "A charming house in Princes Street Gardens, Edinburgh", "May 7");
+const photo2 = new Photo("edinburgh-large", "edinburgh-small", "A charming house in Princes Street Gardens, Edinburgh.", "May 7");
 const photo3 = new Photo("egypt-large", "egypt-small", "The Great Pyramids of Giza are truly spectacular.", "Oct 17");
 const photo4 = new Photo("japan-large", "japan-small", "The cherry blossoms in bloom in Hiroshima.", "Apr 4");
 const photo5 = new Photo("newzealand-large", "newzealand-small", "Every Lord of the Rings fan has to visit The Shire set in New Zealand.", "June 8");
-const photo6 = new Photo("norway-large", "norway-small", "The view at Steinsdalsfossen in Norway", "Sept 16");
-const photo7 = new Photo("switzerland-large", "switzerland-small", "Glacier river in Blatten, Switzerland", "Mar 15");
+const photo6 = new Photo("norway-large", "norway-small", "The view at Steinsdalsfossen in Norway.", "Sept 16");
+const photo7 = new Photo("switzerland-large", "switzerland-small", "Glacier river in Blatten, Switzerland.", "Mar 15");
 const photo8 = new Photo("zhangjiajie-large", "zhangjiajie-small", "The Avatar movie was filmed here in ZhangJiaJie, China.", "Aug 31");
 
 // Initializing Array of photo objects
@@ -64,13 +64,13 @@ function setImages(photos) {
 function mouseOverLeftArrow() {
     //Hover over left arrow to change colour and make cursor pointer
     leftArrow.style.cursor = "pointer";
-    leftArrow.style.color = "#8AE1FC";
+    leftArrow.style.color = "#4C7E3E";
 }
 
 function mouseOverRightArrow() {
     //Hover over right arrow to change colour and make cursor pointer
     rightArrow.style.cursor = "pointer";
-    rightArrow.style.color = "#8AE1FC";
+    rightArrow.style.color = "#4C7E3E";
 }
 
 function mouseOutArrow() {
@@ -163,29 +163,3 @@ leftArrow.onmouseout = function () { mouseOutArrow() };
 rightArrow.onmouseout = function () { mouseOutArrow() };
 leftArrow.onclick = function() { clickLeftArrow(photos) };
 rightArrow.onclick = function() { clickRightArrow(photos) };
-
-
-
-
-
-
-// ANIMATION FOR HOVER KEEPS GOING FOREVER IF YOU DONT HAVE A MOUSE OUT EVENT
-
-    // leftArrow.animate(arrowBounce, arrowTiming);
-
-// const arrowBounce = [
-//     { transform: "translate(0px)" },
-//     { transform: "translateX(10px)"},
-//     { transform: "translateX(0px)" }
-//   ];
-  
-//   const arrowTiming = {
-//     duration: 600,
-//     iterations: Infinity,
-//   };
-  
-//   const newspaper = document.querySelector(".newspaper");
-  
-//   newspaper.addEventListener("click", () => {
-    
-//   });
