@@ -112,6 +112,7 @@ body{
 
 .carousel-paper-off{
     background-color: #5D7F8C;
+    box-shadow: 0 0 10px #000;
 }
 
 .gallery:hover #btn-carousel, .btn-large{
