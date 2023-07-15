@@ -10,14 +10,14 @@ let heroDate = document.getElementById("hero-date");
 let heroCaption = document.getElementById("hero-caption");
 
 // Initializing Photo objects for each image
-const photo1 = new Photo(1, "brazil-large", "brazil-small", "Watching the sunset at the Itatiaia National Park in Brazil was breathtaking!", "July 17");
-const photo2 = new Photo(2, "edinburgh-large", "edinburgh-small", "A charming house in Princes Street Gardens, Edinburgh", "May 7");
-const photo3 = new Photo(3, "egypt-large", "egypt-small", "The Great Pyramids of Giza are truly spectacular.", "Oct 17");
-const photo4 = new Photo(4, "japan-large", "japan-small", "The cherry blossoms in bloom in Hiroshima.", "Apr 4");
-const photo5 = new Photo(5, "newzealand-large", "newzealand-small", "Every Lord of the Rings fan has to visit The Shire set in New Zealand.", "June 8");
-const photo6 = new Photo(6, "norway-large", "norway-small", "The view at Steinsdalsfossen in Norway", "Sept 16");
-const photo7 = new Photo(7, "switzerland-large", "switzerland-small", "Glacier river in Blatten, Switzerland", "Mar 15");
-const photo8 = new Photo(8, "zhangjiajie-large", "zhangjiajie-small", "The Avatar movie was filmed here in ZhangJiaJie, China.", "Aug 31");
+const photo1 = new Photo("I1", "brazil-large", "brazil-small", "Watching the sunset at the Itatiaia National Park in Brazil was breathtaking!", "July 17");
+const photo2 = new Photo("I2", "edinburgh-large", "edinburgh-small", "A charming house in Princes Street Gardens, Edinburgh", "May 7");
+const photo3 = new Photo("I3", "egypt-large", "egypt-small", "The Great Pyramids of Giza are truly spectacular.", "Oct 17");
+const photo4 = new Photo("I4", "japan-large", "japan-small", "The cherry blossoms in bloom in Hiroshima.", "Apr 4");
+const photo5 = new Photo("I5", "newzealand-large", "newzealand-small", "Every Lord of the Rings fan has to visit The Shire set in New Zealand.", "June 8");
+const photo6 = new Photo("I6", "norway-large", "norway-small", "The view at Steinsdalsfossen in Norway", "Sept 16");
+const photo7 = new Photo("I7", "switzerland-large", "switzerland-small", "Glacier river in Blatten, Switzerland", "Mar 15");
+const photo8 = new Photo("I8", "zhangjiajie-large", "zhangjiajie-small", "The Avatar movie was filmed here in ZhangJiaJie, China.", "Aug 31");
 
 // Initializing Array of photo objects
 let photos = [photo1,photo2,photo3,photo4,photo5,photo6,photo7,photo8];
@@ -34,9 +34,9 @@ for (let j = 0; j < photos.length; j++) {
 }
 
 // Functions
-function Photo(id, mainImg, thumbImg, caption, date) {
+function Photo(imgId, mainImg, thumbImg, caption, date) {
     //Create Photo Objects
-    this.id = id;
+    this.imgId = imgId;
     this.mainImg = mainImg;
     this.thumbImg = thumbImg;
     this.caption = caption;
@@ -47,6 +47,7 @@ function setImages(photos) {
     //Sets up thumbnail images in carousel
     for (var p = 0; p < photos.length; p++){
         thumbnails[p].src = "./images/" + photos[p].thumbImg + ".jpg"
+        thumbnails[p].id = photos[p].imgId;
     }
 
     for (let n = 0; n < 3; n++) {
@@ -106,19 +107,11 @@ function turnThumbnailsGray() {
 }
 
 function comapreHeroImgToThumbnail() {
+    //Compares the thumbnail id and the hero id to change the highlighted thumbnail
     for (let k = 0; k < photos.length; k++) {
-        let thumbnailSrc = thumbnails[k].src;
-        let splitThumbSrcString = thumbnailSrc.split("/");
-        let lastThumbString = splitThumbSrcString.pop();
-        let splitLastThumbString = lastThumbString.split("-");
-        let plainThumbSrc = splitLastThumbString.shift();
-        let heroImgSrc = heroImg.src;
-        let splitHeroImgString = heroImgSrc.split("/");
-        let lastHeroString = splitHeroImgString.pop();
-        let splitLastHeroString = lastHeroString.split("-");
-        let plainHeroSrc = splitLastHeroString.shift();
-
-        if (plainHeroSrc == plainThumbSrc) {
+        console.log("Thumb: " + thumbnails[k].id);
+        console.log("Main: " + photos[k].imgId);
+        if (thumbnails[k].id == heroImg.id) {
             thumbnails[k].style.filter = "grayscale(0)";
         }
 
@@ -145,8 +138,8 @@ for (var i = 0; i < thumbnails.length; i++) {
 
         if (imgSrcString == photosSrc){
             heroImg.src = "./images/" + mainPhotoSrc;
+            heroImg.id = photos[k].imgId
             heroDate.innerHTML = photos[k].date;
-            heroImg.setAttribute("id", photos[k].id);
             heroCaption.innerHTML = photos[k].caption;
             break;
         }
@@ -164,29 +157,3 @@ leftArrow.onmouseout = function () { mouseOutArrow() };
 rightArrow.onmouseout = function () { mouseOutArrow() };
 leftArrow.onclick = function() { clickLeftArrow(photos) };
 rightArrow.onclick = function() { clickRightArrow(photos) };
-
-
-
-
-
-
-// ANIMATION FOR HOVER KEEPS GOING FOREVER IF YOU DONT HAVE A MOUSE OUT EVENT
-
-    // leftArrow.animate(arrowBounce, arrowTiming);
-
-// const arrowBounce = [
-//     { transform: "translate(0px)" },
-//     { transform: "translateX(10px)"},
-//     { transform: "translateX(0px)" }
-//   ];
-  
-//   const arrowTiming = {
-//     duration: 600,
-//     iterations: Infinity,
-//   };
-  
-//   const newspaper = document.querySelector(".newspaper");
-  
-//   newspaper.addEventListener("click", () => {
-    
-//   });
