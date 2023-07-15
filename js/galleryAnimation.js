@@ -3,7 +3,7 @@ const btnCarousel = document.getElementById("btn-carousel");
 const btnCarouselPaper = document.querySelector("#btn-wrap > .carousel-paper");
 
 const btnCarouselToast = document.getElementById("carousel-toast");
-const carousel = document.getElementById("carousel");
+const carousel = document.getElementById("carousel-wrap");
 
 btnCarousel.addEventListener("click", function () {
   openCarouselToast();
@@ -31,6 +31,7 @@ function openCarouselToast() {
   }, 200);
 }
 
+
 function closeCarouselToast() {
   // Bottom part expand
   btnCarouselToast.classList.toggle("collapse");
@@ -38,7 +39,10 @@ function closeCarouselToast() {
   // Upper part collapse
   setTimeout(function () {
     carouselToastActions();
-    carouselToastContainer.classList.toggle("moveUp");
     carousel.classList.toggle("moveUp");
+    carouselToastContainer.classList.toggle("moveUp");
+    
   }, 200);
 }
+
+export  {closeCarouselToast};

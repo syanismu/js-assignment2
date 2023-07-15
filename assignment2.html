@@ -15,6 +15,10 @@
 	<title>Image Gallery | COMP1073 Client-Side JavaScript</title>
 	<link rel="stylesheet" href="./css/normalize.css">
 	<link rel="stylesheet" href="./css/gallery.css">
+	<script src="https://kit.fontawesome.com/e4fd6df5c5.js" crossorigin="anonymous"></script>
+
+	<script type="module" src="./js/galleryAnimation.js" defer></script>
+	<script type="module" src="./js/main.js" defer></script>
 </head>
 
 <body>
@@ -23,10 +27,8 @@
 		<figure id="hero-wrap" class="hero-wrap">
 			<img id="hero-image" src="images/japan-large.jpg" alt="" />
 			<figcaption>
-				<div id="hero-date" class="hero-date">Feb 22</div>
-				<div id="hero-caption" class="hero-caption">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-					Cumque reiciendis distinctio natus nemo veniam sit rem qui autem, nesciunt magni? Voluptatum
-					blanditiis qui quae?</div>
+				<div id="hero-date" class="hero-date">Apr 4</div>
+				<div id="hero-caption" class="hero-caption">The cherry blossoms in bloom in Hiroshima.</div>
 			</figcaption>
 		</figure>
 
@@ -42,38 +44,21 @@
 		</div>
 
 
-		<ul id="carousel" class="carousel">
-			<li><img class="thumbnail" src="./images/brazil-small.jpg" alt="" /></li>
-			<li><img class="thumbnail" src="images/egypt-small.jpg" alt="" /></li>
-			<li><img class="thumbnail" src="images/zhangjiajie-small.jpg" alt="" /></li>
-			<li><img class="thumbnail" src="images/edinburgh-small.jpg" alt="" /></li>
-			<li><img class="thumbnail" src="images/newzealand-small.jpg" alt="" /></li>
-			<li><img class="thumbnail" src="images/switzerland-small.jpg" alt="" /></li>
-			<li><img class="thumbnail" src="images/norway-small.jpg" alt="" /></li>
-		</ul>
+		<div id="carousel-wrap" class="carousel-wrap">
+			<!-- Left Arrow -->
+			<i class="fa-solid fa-arrow-left" id="left-arrow"></i>
+
+			<ul id="carousel" class="carousel"></ul>
+			<!-- Right arrow -->
+			<i class="fa-solid fa-arrow-right" id="right-arrow"></i>
+		</div>
 
 	</section>
-	<script src="./js/galleryAnimation.js"></script>
 
 
 
 
-	<!-- PHOTO CREDITS
-Sunflowers in the hamlet Dernekamp, Kirchspiel, Dülmen, North Rhine-Westphalia, Germany
-By Dietmar Rabich - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=61514522
-
-Poppies in cornfield, Dülmen, North Rhine-Westphalia, Germany
-By Dietmar Rabich - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=40957238
-
-Daffodils in Sentmaring park, Münster, North Rhine-Westfalia, Germany
-By Dietmar Rabich - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=48211466
-
-Sentmaring Park, Münster, North Rhine-Westphalia, Germany
-By Dietmar Rabich - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=48576226
-
-Market in Münster, North Rhine-Westphalia, Germany
-By Dietmar Rabich - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=62071586
--->
+	<!-- PHOTO CREDITS: Unsplash -->
 </body>
 
 </html>
